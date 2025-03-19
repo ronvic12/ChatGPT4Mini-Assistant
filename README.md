@@ -7,7 +7,7 @@ Meet Assistant! A simple AI chatbot built using React + Vite and powered by Chat
 - ✅ Built with React and Vite for fast performance
 - ✅ Lightweight and easy to customize
 
-Demo with Assistant:
+# Demo with Assistant:
 ## Intro of ChatBot
 ![Intro of ChatBot](assets/GIF/ChatBot(Intro).gif)
 
