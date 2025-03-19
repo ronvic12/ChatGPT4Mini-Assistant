@@ -32,8 +32,8 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
             className={
                 "p-3 rounded-lg max-w-lg " +
                 (msg.sender === "user"
-                  ? "bg-gradient-to-r from-blue-400 to-blue-600 text-white ml-auto shadow-lg animate-bounce"
-                : "bg-gradient-to-r from-gray-300 to-gray-500 text-gray-800 leading-relaxed shadow-md")    }
+                  ? "bg-blue-500 text-white ml-auto"
+                : "bg-gray-300 text-gray-800")    }
           >
               <Markdown>{msg.text}</Markdown>       
           </div>
