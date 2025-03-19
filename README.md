@@ -8,3 +8,6 @@ A simple AI chatbot built using React + Vite and powered by ChatGPT-4. This proj
 ✅ Lightweight and easy to customize
 
 
+Video Demo:
+![Intro of ChatBot](/Users/ronvicernestcuevas/PersonalProject/ReactApps/ai-chatbot/assets/GIF/ChatBot(Intro).gif)
+
