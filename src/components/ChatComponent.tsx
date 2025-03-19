@@ -15,8 +15,10 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
         if(input.trim()){
             sendMessage(input);
             setInput("");
+            //setIsThinking(true); // Set the bot to thinking while waiting for the response
         }
-    }
+    };
+
     return (
         <div className="flex flex-col h-[80vh] bg-white">
         <h2 className="p-4 font-semibold text-lg text-center bg-blue-100 flex text-blue-800 justify-center items-center gap-2">
@@ -28,17 +30,18 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
           <div
             key={index}
             className={
-                "p-3 rounded-lg max-w-xs " +
+                "p-3 rounded-lg max-w-lg " +
                 (msg.sender === "user"
-                  ? "bg-blue-500 text-white ml-auto"
-                  : "bg-gray-300 text-gray-800")
-              }
+                  ? "bg-gradient-to-r from-blue-400 to-blue-600 text-white ml-auto shadow-lg animate-bounce"
+                : "bg-gradient-to-r from-gray-300 to-gray-500 text-gray-800 leading-relaxed shadow-md")    }
           >
-           <Markdown>{msg.text}</Markdown>
+              <Markdown>{msg.text}</Markdown>       
           </div>
         ))}
 
         </div>
+
+        {/* Input field for user messages */}
         <div className="flex items-center p-4 bg-gray-50">
           <input
             type="text"
