@@ -15,7 +15,6 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
         if(input.trim()){
             sendMessage(input);
             setInput("");
-            //setIsThinking(true); // Set the bot to thinking while waiting for the response
         }
     };
 
