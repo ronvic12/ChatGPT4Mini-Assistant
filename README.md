@@ -4,7 +4,7 @@ Meet Assistant! A simple AI chatbot built using React + Vite and powered by Chat
 Demo with Assistant:
 ![Intro of ChatBot](assets/GIF/ChatBot(Intro).gif)
 
-![Philippines Travel Itinerary with Assistant](assets/GIF/ChatBot(Question).gif)
+![Philippines Travel Itinerary with Assistant](assets/GIF/ChatBot-Question.gif)
 
 🚀 Features
 - ✅ Responsive chat interface
