@@ -7,9 +7,9 @@ Demo with Assistant:
 ![Philippines Travel Itinerary with Assistant](assets/GIF/ChatBot(Question).gif)
 
 🚀 Features
-✅ Responsive chat interface
-✅ AI-powered responses using OpenAI GPT-4 API
-✅ Built with React and Vite for fast performance
-✅ Lightweight and easy to customize
+- ✅ Responsive chat interface
+- ✅ AI-powered responses using OpenAI GPT-4 API
+- ✅ Built with React and Vite for fast performance
+- ✅ Lightweight and easy to customize
 
 
