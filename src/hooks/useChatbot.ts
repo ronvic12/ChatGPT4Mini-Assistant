@@ -12,8 +12,6 @@ const useChatbot = () =>{
     const [messages,setMessages] = useState<Message[]>([]);
 
     const sendMessage = async(message: string) => {
-        console.log('Hey terminal! A message from the browser');
-        console.log("Sending message:", message); // Check if this is logged
         const newMessages: Message[] = 
         [...messages,
             {text:message,sender:"user"},
