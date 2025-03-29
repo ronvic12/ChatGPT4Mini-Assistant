@@ -8,12 +8,7 @@ interface Message{
 }
 
 const useChatbot = () =>{
-    //const API_KEY = import.meta.env.VITE_OPENAI_API;
-    // if (!API_KEY) {
-    //     throw new Error("Missing OPENAI_API_KEY in environment variables");
-    // }
     
-
     const [messages,setMessages] = useState<Message[]>([]);
 
     const sendMessage = async(message: string) => {

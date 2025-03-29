@@ -3,9 +3,12 @@ const router = express.Router();
 var OpenAI = require("openai");
 require('dotenv').config();
 
-console.log()
+const API_KEY = process.env.OPEN_API_KEY;
+if (!API_KEY) {
+    throw new Error("Missing OPENAI_API_KEY in environment variables");
+}
 var openai = new OpenAI({
-    apiKey: process.env.OPEN_API_KEY  
+    apiKey: API_KEY
 });
 
 
