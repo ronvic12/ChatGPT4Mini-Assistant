@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use('/api',router);
 
-if (process.env.VERCEL_ENV === 'production' || process.env.VERCEL_ENV === 'preview') {
+if (process.env.VERCEL_ENV === 'Production' || process.env.VERCEL_ENV === 'Preview') {
     // Vercel will handle routing in serverless environments in production or preview
     module.exports = (req, res) => {
       app(req, res); // Delegate the request to Express handler
