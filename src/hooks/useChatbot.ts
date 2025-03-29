@@ -1,7 +1,6 @@
 import axios from "axios";
 import {useState} from "react";
-
-
+//import OpenAI from "openai";
 
 interface Message{
     text: string;
@@ -9,15 +8,17 @@ interface Message{
 }
 
 const useChatbot = () =>{
-    const API_KEY = import.meta.env.VITE_OPENAI_API;
-    if (!API_KEY) {
-        throw new Error("Missing OPENAI_API_KEY in environment variables");
-    }
+    //const API_KEY = import.meta.env.VITE_OPENAI_API;
+    // if (!API_KEY) {
+    //     throw new Error("Missing OPENAI_API_KEY in environment variables");
+    // }
     
 
     const [messages,setMessages] = useState<Message[]>([]);
 
     const sendMessage = async(message: string) => {
+        console.log('Hey terminal! A message from the browser');
+        console.log("Sending message:", message); // Check if this is logged
         const newMessages: Message[] = 
         [...messages,
             {text:message,sender:"user"},
@@ -26,24 +27,8 @@ const useChatbot = () =>{
         setMessages(newMessages);
 
         try{
-            const response = await axios.post(
-                "https://api.openai.com/v1/chat/completions",
-                {
-                    model:"gpt-4o-mini",
-                    messages:[{
-                        role:"user",
-                        content:message,
-                    }]
-                },
-                {
-                    headers:{
-                        Authorization:`Bearer ${API_KEY}`,
-                        "Content-type": "application/json",
-                    },
-                }
-            );
-            const botMessage = response.data.choices[0].message.content;
-
+            const response = await axios.post("/api/chat",{message});
+            const botMessage = response.data.botMessage;
             setMessages([...newMessages,{text:botMessage,sender:"bot"}])
         }catch(error){
             console.error("Error fetching AI response: ",error);

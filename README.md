@@ -152,4 +152,6 @@ const useChatbot = () => {
 ```
 
 
+Tool helped me debug from client side and see it in terminal instead of Chrome Dev Tool(Vite Plugin Terminal):
+https://github.com/patak-dev/vite-plugin-terminal
 

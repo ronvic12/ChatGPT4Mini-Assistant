@@ -17,6 +17,10 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
             setInput("");
         }
     };
+  //   React.useEffect(() => {
+  //     console.log("Messages updated:", messages); // Log the messages after each update
+  // }, [messages]); // This will run whenever the messages array changes
+
 
     return (
         <div className="flex flex-col h-[80vh] bg-white">
